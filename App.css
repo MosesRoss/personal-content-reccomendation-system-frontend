@@ -1,0 +1,203 @@
+/* ============================
+   Global Styles
+   ============================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #141414; /* Netflix black */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+/* ============================
+   Navbar
+   ============================ */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0.6rem 1rem;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+nav input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin: 0 1rem;
+}
+
+nav button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   Rows (Horizontal Scroll)
+   ============================ */
+.row {
+  margin: 1.5rem 0;
+}
+
+.row h2 {
+  margin-left: 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.row-posters {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================
+   Item Cards
+   ============================ */
+.card {
+  background: linear-gradient(180deg, #1b1b1b 0%, #111 100%);
+  padding: 12px;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-actions a {
+  color: #e50914;
+  font-weight: bold;
+}
+
+.card-actions button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.card-actions button.remove {
+  background: #444;
+}
+
+/* ============================
+   Auth Modal
+   ============================ */
+.auth-modal {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background: #222;
+  padding: 16px;
+  border-radius: 8px;
+  width: 240px;
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-modal input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.auth-modal button {
+  background: #e50914;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ============================
+   Details Page
+   ============================ */
+.details-container {
+  padding: 2rem;
+  color: #fff;
+  background: #121212;
+  min-height: 100vh;
+}
+
+.details-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.details-container iframe {
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
